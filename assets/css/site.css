@@ -1,6 +1,6 @@
 /* ==========================================================================
    Channel site: one stylesheet for every page.
-   Themes are set by a class on <body>: .theme-home, .theme-bh, .theme-inf
+   Themes are set by a class on <body>: .theme-home, .theme-bh, .theme-inf, .theme-sal
    ========================================================================== */
 
 /* ---------- tokens ---------- */
@@ -54,6 +54,20 @@
   --cold-2: #8a6cff;      /* violet */
   --accent-ink: #1d1203;
   --glow: rgba(255, 95, 162, 0.16);
+}
+
+/* Salmonella: the gut's deep violet, the burglar's mint, a salmon alarm */
+.theme-sal {
+  --bg: #120a2a;
+  --bg-2: #1d1140;
+  --ink: #f6eefa;
+  --ink-2: #d6c8e6;
+  --ink-3: #9a88b8;
+  --line: rgba(200, 170, 255, 0.16);
+  --accent: #ff7f6e;      /* salmon: the alarm, inflammation */
+  --accent-2: #7ff0cf;    /* mint: the burglar */
+  --accent-ink: #2a0a06;
+  --glow: rgba(127, 240, 207, 0.16);
 }
 
 /* ---------- base ---------- */
@@ -142,6 +156,7 @@ p { margin: 0 0 1em; }
 .card .go { font-size: 0.85rem; font-weight: 600; color: var(--card-accent, var(--accent)); }
 .card--bh { --card-accent: #ff8a2a; }
 .card--inf { --card-accent: #ff5fa2; }
+.card--sal { --card-accent: #7ff0cf; }
 .tag { display: inline-block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.2rem 0.55rem; border-radius: 99px; border: 1px solid currentColor; color: var(--card-accent, var(--accent)); width: fit-content; }
 
 /* ---------- "how we make these" ---------- */
@@ -261,3 +276,8 @@ p { margin: 0 0 1em; }
 .watch:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
 .watch svg { width: 1.1rem; height: 1.1rem; }
 .watch-soon { margin-top: 1.5rem; opacity: 0.75; }
+
+/* Salmonella page */
+.theme-sal h1 em { color: var(--accent-2); font-style: italic; font-weight: 500; }
+.theme-sal .claims > li::before { color: var(--accent-2); }
+.theme-sal .chapter-claims .ts { color: var(--accent); }
