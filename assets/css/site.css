@@ -172,7 +172,6 @@ p { margin: 0 0 1em; }
 .card--inf { --card-accent: #ff5fa2; }
 .card--sal { --card-accent: #7ff0cf; }
 .card--iw { --card-accent: #ffb3c7; }
-.card-art { aspect-ratio: 16 / 9; display: grid; place-items: center; text-align: center; padding: 1rem; font-family: var(--font-display); font-size: clamp(1.3rem, 3vw, 1.8rem); color: #fbf0f6; background: radial-gradient(circle at 78% 30%, rgba(255,179,199,0.55), rgba(255,179,199,0) 42%), radial-gradient(circle at 18% 78%, rgba(95,224,207,0.4), rgba(95,224,207,0) 45%), #2e1b55; }
 .tag { display: inline-block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.2rem 0.55rem; border-radius: 99px; border: 1px solid currentColor; color: var(--card-accent, var(--accent)); width: fit-content; }
 
 /* ---------- "how we make these" ---------- */
@@ -299,8 +298,6 @@ p { margin: 0 0 1em; }
 .theme-sal .chapter-claims .ts { color: var(--accent); }
 
 /* Small Worlds page */
-.theme-iw .film-hero { background: radial-gradient(circle at 85% 20%, rgba(255,179,199,0.22), rgba(255,179,199,0) 40%), radial-gradient(circle at 10% 45%, rgba(95,224,207,0.16), rgba(95,224,207,0) 45%), linear-gradient(180deg, #2e1b55 0%, var(--bg) 85%); }
-.theme-iw .film-hero .intro { padding-top: clamp(3rem, 12vh, 7rem); }
 .theme-iw h1 em { color: var(--accent); font-style: italic; font-weight: 500; }
 .theme-iw .claims > li::before { color: var(--accent-2); }
 .theme-iw .chapter-claims .ts { color: var(--accent); }
