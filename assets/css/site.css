@@ -1,6 +1,6 @@
 /* ==========================================================================
    Channel site: one stylesheet for every page.
-   Themes are set by a class on <body>: .theme-home, .theme-bh, .theme-inf, .theme-sal
+   Themes are set by a class on <body>: .theme-home, .theme-bh, .theme-inf, .theme-sal, .theme-iw, .theme-sc
    ========================================================================== */
 
 /* ---------- tokens ---------- */
@@ -82,6 +82,23 @@
   --accent-2: #5fe0cf;    /* cave teal */
   --accent-ink: #3a0a22;
   --glow: rgba(95, 224, 207, 0.16);
+}
+
+/* Why Smart People Fall for Scams: wine-red theatre, gold spotlight, cobalt, alarm red, leaf green */
+.theme-sc {
+  --bg: #2a0410;
+  --bg-2: #44091c;
+  --ink: #fff3e6;
+  --ink-2: #ecd2c8;
+  --ink-3: #c19a9c;
+  --line: rgba(255, 211, 107, 0.2);
+  --accent: #ffd36b;      /* gold spotlight */
+  --accent-2: #3fcf86;    /* leaf green (lifted from #1f9e57 for text on wine) */
+  --cobalt: #2147d9;      /* the phone, the stage curtains */
+  --alarm: #ff2e2e;       /* the hot state */
+  --leaf: #1f9e57;
+  --accent-ink: #2a0410;
+  --glow: rgba(255, 46, 46, 0.18);
 }
 
 /* ---------- base ---------- */
@@ -172,6 +189,7 @@ p { margin: 0 0 1em; }
 .card--inf { --card-accent: #ff5fa2; }
 .card--sal { --card-accent: #7ff0cf; }
 .card--iw { --card-accent: #ffb3c7; }
+.card--sc { --card-accent: #ffd36b; }
 .tag { display: inline-block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.2rem 0.55rem; border-radius: 99px; border: 1px solid currentColor; color: var(--card-accent, var(--accent)); width: fit-content; }
 
 /* ---------- "how we make these" ---------- */
@@ -301,3 +319,10 @@ p { margin: 0 0 1em; }
 .theme-iw h1 em { color: var(--accent); font-style: italic; font-weight: 500; }
 .theme-iw .claims > li::before { color: var(--accent-2); }
 .theme-iw .chapter-claims .ts { color: var(--accent); }
+
+/* Why Smart People Fall for Scams page */
+.theme-sc h1 em { color: var(--accent); font-style: italic; font-weight: 500; }
+.theme-sc .claims > li::before { color: var(--accent-2); }
+.theme-sc .chapter-claims .ts { color: var(--accent); }
+.theme-sc .caveats .k--unc { color: var(--alarm); }
+.theme-sc .yt { box-shadow: -30px 30px 90px -40px rgba(255,46,46,0.35), 30px 30px 90px -40px rgba(33,71,217,0.35); }

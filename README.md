@@ -9,7 +9,8 @@ index.html            channel home: banner hero, film cards, "How we make these"
 black-hole.html       sources and notes for "What If You Fell Into a Black Hole?" (ember/black theme)
 influenced.html       sources and notes for "If They Are the Influencers, You Are the Influenced" (warm vs cold theme)
 isolated-worlds.html  sources and notes for "Small Worlds Make Strange Things" (violet/pink/teal theme; its URLs are listed in tools/sources_isolated_worlds.txt)
-assets/css/site.css   all styles; page themes are body classes: .theme-home, .theme-bh, .theme-inf, .theme-sal, .theme-iw
+scams.html            sources and notes for "Why Smart People Fall for Scams" (wine-red theatre/gold theme; its URLs are listed in tools/sources_scams.txt)
+assets/css/site.css   all styles; page themes are body classes: .theme-home, .theme-bh, .theme-inf, .theme-sal, .theme-iw, .theme-sc
 assets/js/site.js     brand name, YouTube embed, chapter links
 assets/img/           banner, avatar, thumbnail and film frames (JPEG, max 1600 px wide)
 tools/check.py        checks links, images, HTML and sources (see below)
