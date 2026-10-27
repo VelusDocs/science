@@ -1,6 +1,6 @@
 /* ==========================================================================
    Channel site: one stylesheet for every page.
-   Themes are set by a class on <body>: .theme-home, .theme-bh, .theme-inf, .theme-sal, .theme-iw, .theme-sc
+   Themes are set by a class on <body>: .theme-home, .theme-bh, .theme-inf, .theme-sal, .theme-iw, .theme-sc, .theme-ifl
    ========================================================================== */
 
 /* ---------- tokens ---------- */
@@ -101,6 +101,21 @@
   --glow: rgba(255, 46, 46, 0.18);
 }
 
+/* Why Is Everything So Expensive Now?: wine void, gold price tags and ratchet, green dollar */
+.theme-ifl {
+  --bg: #1f0815;
+  --bg-2: #361026;
+  --ink: #fff4e4;
+  --ink-2: #efd6cf;
+  --ink-3: #c39ca8;
+  --line: rgba(255, 201, 74, 0.2);
+  --accent: #ffc94a;      /* gold: price tags, the ratchet */
+  --accent-2: #5fd68f;    /* the green dollar (lifted for text on wine) */
+  --dollar: #2fa866;
+  --accent-ink: #2a0a18;
+  --glow: rgba(255, 201, 74, 0.16);
+}
+
 /* ---------- base ---------- */
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-behavior: smooth; }
@@ -190,6 +205,7 @@ p { margin: 0 0 1em; }
 .card--sal { --card-accent: #7ff0cf; }
 .card--iw { --card-accent: #ffb3c7; }
 .card--sc { --card-accent: #ffd36b; }
+.card--ifl { --card-accent: #5fd68f; }
 .tag { display: inline-block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.2rem 0.55rem; border-radius: 99px; border: 1px solid currentColor; color: var(--card-accent, var(--accent)); width: fit-content; }
 
 /* ---------- "how we make these" ---------- */
@@ -326,3 +342,9 @@ p { margin: 0 0 1em; }
 .theme-sc .chapter-claims .ts { color: var(--accent); }
 .theme-sc .caveats .k--unc { color: var(--alarm); }
 .theme-sc .yt { box-shadow: -30px 30px 90px -40px rgba(255,46,46,0.35), 30px 30px 90px -40px rgba(33,71,217,0.35); }
+
+/* Why Is Everything So Expensive Now? page */
+.theme-ifl h1 em { color: var(--accent); font-style: italic; font-weight: 500; }
+.theme-ifl .claims > li::before { color: var(--accent-2); }
+.theme-ifl .chapter-claims .ts { color: var(--accent); }
+.theme-ifl .yt { box-shadow: -30px 30px 90px -40px rgba(255,201,74,0.35), 30px 30px 90px -40px rgba(47,168,102,0.35); }
