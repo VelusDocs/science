@@ -1,6 +1,6 @@
 /* ==========================================================================
    Channel site: one stylesheet for every page.
-   Themes are set by a class on <body>: .theme-home, .theme-bh, .theme-inf, .theme-sal, .theme-iw, .theme-sc, .theme-ifl, .theme-slp, .theme-rts
+   Themes are set by a class on <body>: .theme-home, .theme-bh, .theme-inf, .theme-sal, .theme-iw
    ========================================================================== */
 
 /* ---------- tokens ---------- */
@@ -82,70 +82,6 @@
   --accent-2: #5fe0cf;    /* cave teal */
   --accent-ink: #3a0a22;
   --glow: rgba(95, 224, 207, 0.16);
-}
-
-/* Why Smart People Fall for Scams: wine-red theatre, gold spotlight, cobalt, alarm red, leaf green */
-.theme-sc {
-  --bg: #2a0410;
-  --bg-2: #44091c;
-  --ink: #fff3e6;
-  --ink-2: #ecd2c8;
-  --ink-3: #c19a9c;
-  --line: rgba(255, 211, 107, 0.2);
-  --accent: #ffd36b;      /* gold spotlight */
-  --accent-2: #3fcf86;    /* leaf green (lifted from #1f9e57 for text on wine) */
-  --cobalt: #2147d9;      /* the phone, the stage curtains */
-  --alarm: #ff2e2e;       /* the hot state */
-  --leaf: #1f9e57;
-  --accent-ink: #2a0410;
-  --glow: rgba(255, 46, 46, 0.18);
-}
-
-/* Why Is Everything So Expensive Now?: wine void, gold price tags and ratchet, green dollar */
-.theme-ifl {
-  --bg: #1f0815;
-  --bg-2: #361026;
-  --ink: #fff4e4;
-  --ink-2: #efd6cf;
-  --ink-3: #c39ca8;
-  --line: rgba(255, 201, 74, 0.2);
-  --accent: #ffc94a;      /* gold: price tags, the ratchet */
-  --accent-2: #5fd68f;    /* the green dollar (lifted for text on wine) */
-  --dollar: #2fa866;
-  --accent-ink: #2a0a18;
-  --glow: rgba(255, 201, 74, 0.16);
-}
-
-/* What If the World Went Solarpunk?: deep leaf green, azure sky, golden fields; coal greys for the dark side */
-.theme-slp {
-  --bg: #062420;
-  --bg-2: #0c3530;
-  --ink: #f4fbf2;
-  --ink-2: #cfe6d8;
-  --ink-3: #8fb7a8;
-  --line: rgba(124, 226, 160, 0.18);
-  --accent: #ffd447;      /* golden fields, the sun */
-  --accent-2: #5cc8ff;    /* azure sky (lifted for text on green) */
-  --leaf: #5fdc7a;        /* the glass leaves' green */
-  --coal: #24262b;        /* the factory and the funeral */
-  --coal-2: #34373d;
-  --accent-ink: #062420;
-  --glow: rgba(255, 212, 71, 0.18);
-}
-
-/* How Do Rotor Sails Work?: deep sea blue, white rotors with a red band, sunrise coral, teal wind streaks */
-.theme-rts {
-  --bg: #08193a;
-  --bg-2: #0f2650;
-  --ink: #f6f3ec;         /* the white of the rotors */
-  --ink-2: #d2dcec;
-  --ink-3: #93a6c4;
-  --line: rgba(95, 214, 230, 0.18);
-  --accent: #ffa76b;      /* sunrise coral, the warm accent */
-  --accent-2: #5fd6e6;    /* the teal wind streaks */
-  --band: #ef4b3c;        /* the red band on every rotor */
-  --accent-ink: #08193a;
-  --glow: rgba(255, 167, 107, 0.18);
 }
 
 /* ---------- base ---------- */
@@ -236,10 +172,6 @@ p { margin: 0 0 1em; }
 .card--inf { --card-accent: #ff5fa2; }
 .card--sal { --card-accent: #7ff0cf; }
 .card--iw { --card-accent: #ffb3c7; }
-.card--sc { --card-accent: #ffd36b; }
-.card--ifl { --card-accent: #5fd68f; }
-.card--slp { --card-accent: #ffd447; }
-.card--rts { --card-accent: #ffa76b; }
 .tag { display: inline-block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.2rem 0.55rem; border-radius: 99px; border: 1px solid currentColor; color: var(--card-accent, var(--accent)); width: fit-content; }
 
 /* ---------- "how we make these" ---------- */
@@ -371,36 +303,9 @@ p { margin: 0 0 1em; }
 .theme-iw .chapter-claims .ts { color: var(--accent); }
 
 /* Why Smart People Fall for Scams page */
-.theme-sc h1 em { color: var(--accent); font-style: italic; font-weight: 500; }
-.theme-sc .claims > li::before { color: var(--accent-2); }
-.theme-sc .chapter-claims .ts { color: var(--accent); }
-.theme-sc .caveats .k--unc { color: var(--alarm); }
-.theme-sc .yt { box-shadow: -30px 30px 90px -40px rgba(255,46,46,0.35), 30px 30px 90px -40px rgba(33,71,217,0.35); }
 
 /* Why Is Everything So Expensive Now? page */
-.theme-ifl h1 em { color: var(--accent); font-style: italic; font-weight: 500; }
-.theme-ifl .claims > li::before { color: var(--accent-2); }
-.theme-ifl .chapter-claims .ts { color: var(--accent); }
-.theme-ifl .yt { box-shadow: -30px 30px 90px -40px rgba(255,201,74,0.35), 30px 30px 90px -40px rgba(47,168,102,0.35); }
 
 /* What If the World Went Solarpunk? page: sky-to-leaf greens; the life-and-death chapter in coal greys */
-.theme-slp { background: linear-gradient(180deg, var(--bg) 0%, #072b2a 45%, #08303a 100%); }
-.theme-slp h1 em { font-style: italic; font-weight: 500; background: linear-gradient(90deg, var(--leaf), var(--accent) 55%, var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
-.theme-slp .claims > li::before { color: var(--leaf); }
-.theme-slp .chapter-claims .ts { color: var(--accent); }
-.theme-slp .caveats .k--unc { color: var(--accent-2); }
-.theme-slp .chapter-claims[data-side="coal"] { background: var(--coal); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius); padding: 1.5rem clamp(1rem, 3vw, 1.75rem) 1.75rem; --line: rgba(255,255,255,0.1); }
-.theme-slp .chapter-claims[data-side="coal"] .ts { color: #b9bcc2; }
-.theme-slp .chapter-claims[data-side="coal"] .claims > li::before { color: #9a9ea6; }
-.theme-slp .chapter-claims[data-side="coal"] .claims .src a { color: #9fdcff; }
-.theme-slp .chapter-claims[data-side="coal"] .frame figcaption { background: var(--coal-2); color: #b9bcc2; }
-.theme-slp .yt { box-shadow: -30px 30px 90px -40px rgba(255,212,71,0.35), 30px 30px 90px -40px rgba(92,200,255,0.35); }
 
 /* How Do Rotor Sails Work? page: night sea at the top, morning sea below; coral and teal like the film's sunrise and wind */
-.theme-rts { background: linear-gradient(180deg, var(--bg) 0%, #0b2349 45%, #0d3060 100%); }
-.theme-rts h1 em { font-style: italic; font-weight: 500; background: linear-gradient(90deg, var(--accent), #ffd2a8 50%, var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
-.theme-rts .claims > li::before { color: var(--accent-2); }
-.theme-rts .chapter-claims .ts { color: var(--accent); }
-.theme-rts .caveats .k--unc { color: var(--accent-2); }
-.theme-rts .caveats .k--con { color: #ff8577; }
-.theme-rts .yt { box-shadow: -30px 30px 90px -40px rgba(255,167,107,0.38), 30px 30px 90px -40px rgba(95,214,230,0.35); }
