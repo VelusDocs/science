@@ -97,6 +97,20 @@
   --glow: rgba(127, 140, 255, 0.18);
 }
 
+/* Berserker film: deep indigo, Hello orange and flash pink */
+.theme-bsk {
+  --bg: #0a0722;
+  --bg-2: #15103d;
+  --ink: #f6f0fb;
+  --ink-2: #d3c9e8;
+  --ink-3: #9a90bd;
+  --line: rgba(190, 150, 255, 0.18);
+  --accent: #ff8a3d;
+  --accent-2: #ff5fa2;
+  --accent-ink: #240a02;
+  --glow: rgba(255, 110, 70, 0.2);
+}
+
 /* ---------- base ---------- */
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-behavior: smooth; }
@@ -188,6 +202,7 @@ p { margin: 0 0 1em; }
 .card--sal { --card-accent: #7ff0cf; }
 .card--iw { --card-accent: #ffb3c7; }
 .card--bd { --card-accent: #ff7ab8; }
+.card--bsk { --card-accent: #ff8a3d; }
 .card--rew { --card-accent: #ffd447; }
 .card--bot { --card-accent: #7fc8ff; }
 .tag { display: inline-block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.2rem 0.55rem; border-radius: 99px; border: 1px solid currentColor; color: var(--card-accent, var(--accent)); width: fit-content; }
@@ -338,6 +353,11 @@ p { margin: 0 0 1em; }
 .theme-bd h2 em { color: var(--accent); font-style: italic; font-weight: 500; }
 .theme-bd .claims > li::before { color: var(--accent-2); }
 .theme-bd .chapter-claims .ts { color: var(--accent); }
+
+.theme-bsk h1 em { color: var(--accent); font-style: italic; font-weight: 500; }
+.theme-bsk h2 em { color: var(--accent); font-style: italic; font-weight: 500; }
+.theme-bsk .claims > li::before { color: var(--accent-2); }
+.theme-bsk .chapter-claims .ts { color: var(--accent); }
 
 /* Why Smart People Fall for Scams page */
 
