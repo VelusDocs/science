@@ -1,6 +1,6 @@
 /* ==========================================================================
    Channel site: one stylesheet for every page.
-   Themes are set by a class on <body>: .theme-home, .theme-bh, .theme-inf, .theme-sal, .theme-iw, .theme-bd
+   Themes are set by a class on <body>: .theme-home, .theme-bh, .theme-inf, .theme-sal, .theme-iw, .theme-bd, .theme-gld
    ========================================================================== */
 
 /* ---------- tokens ---------- */
@@ -111,6 +111,20 @@
   --glow: rgba(255, 110, 70, 0.2);
 }
 
+/* Gold film: deep blue-violet with warm gold, like the thumbnail */
+.theme-gld {
+  --bg: #0a0a2a;
+  --bg-2: #14134a;
+  --ink: #f6f1fb;
+  --ink-2: #d2cbea;
+  --ink-3: #9a96c4;
+  --line: rgba(170, 160, 255, 0.18);
+  --accent: #ffc233;
+  --accent-2: #5fb4ff;
+  --accent-ink: #231600;
+  --glow: rgba(255, 190, 60, 0.2);
+}
+
 /* ---------- base ---------- */
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-behavior: smooth; }
@@ -203,6 +217,7 @@ p { margin: 0 0 1em; }
 .card--iw { --card-accent: #ffb3c7; }
 .card--bd { --card-accent: #ff7ab8; }
 .card--bsk { --card-accent: #ff8a3d; }
+.card--gld { --card-accent: #ffc233; }
 .card--rew { --card-accent: #ffd447; }
 .card--bot { --card-accent: #7fc8ff; }
 .tag { display: inline-block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.2rem 0.55rem; border-radius: 99px; border: 1px solid currentColor; color: var(--card-accent, var(--accent)); width: fit-content; }
@@ -358,6 +373,11 @@ p { margin: 0 0 1em; }
 .theme-bsk h2 em { color: var(--accent); font-style: italic; font-weight: 500; }
 .theme-bsk .claims > li::before { color: var(--accent-2); }
 .theme-bsk .chapter-claims .ts { color: var(--accent); }
+
+.theme-gld h1 em { color: var(--accent); font-style: italic; font-weight: 500; }
+.theme-gld h2 em { color: var(--accent); font-style: italic; font-weight: 500; }
+.theme-gld .claims > li::before { color: var(--accent-2); }
+.theme-gld .chapter-claims .ts { color: var(--accent); }
 
 /* Why Smart People Fall for Scams page */
 
