@@ -125,6 +125,21 @@
   --glow: rgba(255, 190, 60, 0.2);
 }
 
+/* Books section: warm paper and navy ink, like the printed pages */
+.theme-books {
+  --bg: #f7f1e3;
+  --bg-2: #fffaf0;
+  --ink: #1b1740;
+  --ink-2: #3f3a63;
+  --ink-3: #635d7c;
+  --line: rgba(27, 23, 64, 0.16);
+  --accent: #8f5c00;      /* gold, dark enough to read on paper */
+  --accent-2: #4a1fb0;    /* the violet of the cover's subtitle */
+  --accent-ink: #fffaf0;
+  --glow: rgba(255, 190, 60, 0.35);
+  --warm-3: #b3261e;
+}
+
 /* ---------- base ---------- */
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-behavior: smooth; }
@@ -378,6 +393,71 @@ p { margin: 0 0 1em; }
 .theme-gld h2 em { color: var(--accent); font-style: italic; font-weight: 500; }
 .theme-gld .claims > li::before { color: var(--accent-2); }
 .theme-gld .chapter-claims .ts { color: var(--accent); }
+
+/* Link from the gold film page to its book */
+.book-link { margin-top: 1rem; font-size: 0.9rem; color: var(--ink-2); }
+
+/* Books section */
+.theme-books h1 em, .theme-books h2 em { color: var(--accent); font-style: italic; font-weight: 500; }
+.theme-books .claims > li::before { color: var(--accent); }
+.theme-books .chapter-claims .ts { color: var(--accent); }
+.theme-books .lede { font-size: clamp(1.02rem, 2.1vw, 1.2rem); color: var(--ink-2); max-width: var(--measure); margin-top: 1.25rem; }
+
+.btn { display: inline-flex; align-items: center; padding: 0.8rem 1.4rem; border-radius: 999px; font-weight: 600; font-size: 0.95rem; text-decoration: none; }
+.btn--buy { background: #ffc233; color: #231600; border: 0; font-family: inherit; cursor: pointer; box-shadow: 0 16px 36px -18px rgba(143, 92, 0, 0.7); }
+.btn--plain { color: var(--ink); border: 1px solid var(--line); }
+.btn--plain:hover { border-color: var(--accent); }
+.book-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.5rem; }
+.book-soon { font-size: 0.8rem; color: var(--ink-3); margin: 0.75rem 0 0; }
+.book-jump { font-size: 0.9rem; color: var(--ink-2); margin: 1.25rem 0 0; }
+
+.book-cover { display: block; max-width: 18rem; margin: 0 auto; }
+.book-cover img { width: 100%; border-radius: 3px 8px 8px 3px; box-shadow: 0 30px 60px -24px rgba(27, 23, 64, 0.5), 0 0 0 1px var(--line); }
+
+.books-intro { padding: 8rem 0 clamp(2rem, 5vw, 3.5rem); }
+.book-card { display: grid; gap: 2rem; background: var(--bg-2); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(1.5rem, 4vw, 3rem); }
+.book-card h2 a { color: var(--ink); text-decoration: none; }
+.book-card h2 a:hover { text-decoration: underline; text-decoration-color: var(--accent); }
+.book-card-body p:not(.kicker):not(.book-soon) { color: var(--ink-2); margin-top: 1rem; max-width: var(--measure); }
+.book-next { margin-top: 1.5rem; padding: 1.25rem 0; border-top: 1px solid var(--line); }
+.book-next .kicker { margin: 0 0 0.3rem; }
+.book-next p:last-child { margin: 0; color: var(--ink-2); }
+@media (min-width: 800px) {
+  .book-card { grid-template-columns: minmax(14rem, 20rem) 1fr; gap: 3rem; align-items: center; }
+  .book-card .book-cover { margin: 0; max-width: none; }
+}
+
+.book-hero { padding-top: 7rem; }
+.book-hero .wrap { display: grid; gap: 2.5rem; }
+.book-hero h1 { font-size: clamp(2.3rem, 6.5vw, 4.4rem); }
+@media (min-width: 800px) {
+  .book-hero .wrap { grid-template-columns: minmax(16rem, 24rem) 1fr; gap: 4rem; align-items: center; }
+  .book-hero .book-cover { margin: 0; max-width: none; }
+}
+
+.book-inside { display: grid; gap: 1.25rem; padding-top: clamp(3rem, 7vw, 5rem); }
+@media (min-width: 900px) { .book-inside { grid-template-columns: repeat(3, 1fr); } }
+.book-inside figure { margin: 0; }
+.book-inside img { width: 100%; border-radius: 6px; box-shadow: 0 0 0 1px var(--line); }
+.book-inside figcaption { font-size: 0.78rem; color: var(--ink-3); padding-top: 0.5rem; }
+
+.newsletter { display: grid; gap: 1.5rem; margin-top: clamp(3rem, 7vw, 5rem); padding: clamp(1.5rem, 4vw, 2.5rem); background: var(--bg-2); border: 1px solid var(--line); border-radius: var(--radius); }
+@media (min-width: 900px) { .newsletter { grid-template-columns: 1fr 1.2fr; gap: 3rem; } }
+.newsletter h2 { font-size: clamp(1.5rem, 3.4vw, 2.2rem); }
+.nl-status { color: var(--accent); font-size: 0.9rem; font-weight: 500; margin: 0.9rem 0 0; }
+.nl-form fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+.nl-form label { font-size: 0.85rem; font-weight: 500; }
+.nl-row { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 0.35rem; }
+.nl-row input { flex: 1 1 14rem; min-width: 0; padding: 0.75rem 1rem; font: inherit; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 999px; }
+.nl-form fieldset:disabled .nl-row input, .nl-form fieldset:disabled .btn { opacity: 0.6; cursor: not-allowed; }
+.nl-consent { display: flex; gap: 0.55rem; align-items: flex-start; margin-top: 0.9rem; }
+.nl-consent input { margin-top: 0.3rem; }
+.nl-small { font-size: 0.78rem; color: var(--ink-3); margin: 0.7rem 0 0; }
+
+.ref-h { font-size: 1.15rem; margin-top: 1.75rem; }
+.refs { margin: 0.6rem 0 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+.refs li { padding: 0.65rem 0; border-bottom: 1px solid var(--line); font-size: 0.92rem; color: var(--ink-2); overflow-wrap: anywhere; }
+.refs a { color: var(--accent-2); }
 
 /* Why Smart People Fall for Scams page */
 

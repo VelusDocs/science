@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Gold Did Not Come From Earth: the book and its sources</title>
+  <meta name="description" content="The illustrated book Your Gold Did Not Come From Earth: where to get it, and the sources behind every fact in it.">
+  <meta name="theme-color" content="#f7f1e3">
+  <link rel="icon" href="../assets/img/avatar.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Poppins:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body class="theme-books">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="../index.html"><img src="../assets/img/avatar.jpg" alt="" width="40" height="40"><span class="brand"></span></a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html">Books</a>
+        <a href="../index.html#films">Videos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="book-hero" aria-labelledby="title">
+      <div class="wrap">
+        <div class="book-cover"><img src="../assets/img/book-gold-cover.jpg" width="834" height="1200" alt="Book cover: Your Gold Did Not Come From Earth, An Illustrated Astronomy Book, Vol. 1, with a gold ring framing two colliding neutron stars."></div>
+        <div>
+          <p class="kicker">An Illustrated Astronomy Book · Vol. 1</p>
+          <h1 id="title">Your Gold Did Not Come From <em>Earth</em></h1>
+          <p class="lede">The oldest history of the metal on your finger. Fusion in stars stops at iron, so gold has to be built some other way. This book follows it from the crash of two dead stars to a ring you can hold, and says plainly which parts are still debated.</p>
+          <div class="book-actions">
+            <!-- AMAZON-TODO: replace href="#amazon-todo" with the real Amazon link when the book is published, then delete the "not on sale yet" note below. -->
+            <a class="btn btn--buy" href="#amazon-todo">Get it on Amazon</a>
+            <a class="btn btn--plain" href="../gold.html">Watch the video →</a>
+          </div>
+          <p class="book-soon" id="amazon-todo">Not on sale yet. The Amazon link will appear here when the book is published.</p>
+          <p class="book-jump">Came from the QR code in the book? <a href="#references">Go straight to the sources</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap book-inside" aria-label="Pages from the book">
+      <figure><img src="../assets/img/book-gold-spread-crash.jpg" width="1568" height="1128" loading="lazy" alt="Book spread titled Two dead stars, one ripple: two blue neutron stars merge in a white flash with streams of gold debris curling away, on a dark starry background."><figcaption>Pages 44–45. The crash of August 2017.</figcaption></figure>
+      <figure><img src="../assets/img/book-gold-spread-star.jpg" width="1568" height="1128" loading="lazy" alt="Book spread titled Bigger stars, heavier fuels: a huge star cut open to show coloured layers, with how long each fuel lasts, from 7 million years of hydrogen to 1 day of silicon."><figcaption>Pages 18–19. Why fusion runs out.</figcaption></figure>
+      <figure><img src="../assets/img/book-gold-spread-journey.jpg" width="1568" height="1128" loading="lazy" alt="Book spread titled From the sky to your finger: a glowing gold thread links a neutron star crash, a cloud of gas, the Sun, the Earth, meteorites, a mine and a gold ring."><figcaption>Pages 70–71. From the sky to your finger.</figcaption></figure>
+    </section>
+
+    <section class="wrap" id="newsletter" aria-labelledby="nl-h">
+      <div class="newsletter">
+        <div>
+          <p class="kicker">Newsletter</p>
+          <h2 id="nl-h">Get an email when the next book comes out</h2>
+        </div>
+        <!-- Sign-ups go to the Cloudflare Worker velus-subscribe (D1 database, EU). Source: ~/Documents/youtube/cf_velus_subscribe -->
+        <form class="nl-form" id="nl-form" action="https://velus-subscribe.foroitalico.workers.dev/subscribe" method="post">
+          <fieldset>
+            <legend class="visually-hidden">Newsletter sign-up</legend>
+            <label for="nl-email">Email address</label>
+            <div class="nl-row">
+              <input id="nl-email" type="email" name="email" autocomplete="email" required>
+              <button class="btn btn--buy" type="submit">Keep me posted</button>
+            </div>
+            <input type="hidden" name="source" value="book-gold">
+            <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+            <label class="nl-consent"><input type="checkbox" name="consent" value="yes" required> <span>I agree to receive emails from <span class="brand"></span> about new books and videos. I can unsubscribe at any time.</span></label>
+            <p class="nl-small">Privacy: we use your address only to tell you about new books and videos, and we never sell or share it. It is stored in a database in the EU (Cloudflare) together with the date of your consent. Every email has an unsubscribe link, and you can ask us to delete your address at any time. <!-- PRIVACY-TODO: add a contact address here --></p>
+            <p class="nl-status" id="nl-msg" role="status" aria-live="polite"></p>
+          </fieldset>
+        </form>
+        <script>
+        (function(){var f=document.getElementById("nl-form"),m=document.getElementById("nl-msg");
+        f.addEventListener("submit",function(e){e.preventDefault();var d=Object.fromEntries(new FormData(f));m.textContent="Sending...";
+        fetch(f.action,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(d)})
+        .then(function(r){return r.json()}).then(function(j){m.textContent=j.ok?"Thank you! You are on the list.":"Sorry, that did not work: "+(j.error||"try again");if(j.ok)f.reset();})
+        .catch(function(){m.textContent="Sorry, that did not work. Please try again later."});});})();
+        </script>
+      </div>
+    </section>
+
+    <div class="wrap layout">
+      <nav class="toc" aria-label="On this page">
+        <p class="kicker">The sources</p>
+        <ol>
+          <li><a href="#references">The book's references</a></li>
+          <li><a href="#added">Added in the book</a></li>
+          <li><a href="#claims">Claim by claim</a></li>
+          <li><a href="#caveats">Simplifications and caveats</a></li>
+        </ol>
+      </nav>
+
+      <div>
+        <section class="block" id="references" aria-labelledby="references-h">
+          <h2 id="references-h">The book's <em>references</em></h2>
+          <p class="note">The main works behind the book. A reference is linked only when its address is in our research files; the others are given in full so you can look them up.</p>
+
+          <h3 class="ref-h">Gravitational waves and the kilonova</h3>
+          <ul class="refs">
+            <li>Abbott et al., Multi-messenger Observations of a Binary Neutron Star Merger, Astrophys. J. Lett. 848, L12 (2017).</li>
+            <li>Coulter et al., Swope Supernova Survey 2017a (SSS17a), the optical counterpart to a gravitational wave source, Science 358, 1556–1558 (2017). The first image.</li>
+            <li><a href="https://arxiv.org/abs/1710.05463">Kasen et al., Origin of the heavy elements in binary neutron-star mergers from a gravitational-wave event</a>, Nature 551, 80–84 (2017). The two clouds of debris.</li>
+            <li>Watson et al., Identification of strontium in the merger of two neutron stars, Nature 574, 497–500 (2019).</li>
+          </ul>
+
+          <h3 class="ref-h">The r-process</h3>
+          <ul class="refs">
+            <li>Burbidge, Burbidge, Fowler and Hoyle, Synthesis of the Elements in Stars, Rev. Mod. Phys. 29, 547–650 (1957). <a href="https://en.wikipedia.org/wiki/B2FH_paper">About the paper, on Wikipedia</a>.</li>
+            <li>Cameron, Nuclear Reactions in Stars and Nucleogenesis, Publ. Astron. Soc. Pacific 69, 201 (1957).</li>
+            <li><a href="https://arxiv.org/abs/1901.01410">Cowan et al., Origin of the heaviest elements: the rapid neutron-capture process</a>, Rev. Mod. Phys. 93, 015002 (2021).</li>
+          </ul>
+
+          <h3 class="ref-h">The magnetar flare</h3>
+          <ul class="refs">
+            <li><a href="https://iopscience.iop.org/article/10.3847/2041-8213/adc9b0">Patel et al., Direct evidence for r-process nucleosynthesis in delayed MeV emission from the SGR 1806-20 magnetar giant flare</a>, Astrophys. J. Lett. 984, L29 (2025).</li>
+            <li>NASA Goddard press material on SGR 1806-20. The film's research used <a href="https://swift.gsfc.nasa.gov/news/2005/05-051.html">NASA Swift, 2005</a> and <a href="https://imagine.gsfc.nasa.gov/news/25feb05.html">NASA Imagine the Universe, February 2005</a>.</li>
+          </ul>
+
+          <h3 class="ref-h">Neutron stars</h3>
+          <ul class="refs">
+            <li><a href="https://imagine.gsfc.nasa.gov/science/objects/neutron_stars1.html">NASA, Imagine the Universe</a>.</li>
+          </ul>
+
+          <h3 class="ref-h">Earth and its gold</h3>
+          <ul class="refs">
+            <li><a href="https://www.nature.com/articles/nature10399">Willbold, Elliott and Moorbath, The tungsten isotopic composition of the Earth's mantle before the terminal bombardment</a>, Nature 477, 195–198 (2011).</li>
+            <li>Messling et al., Ru and W isotope systematics in ocean island basalts reveals core leakage, Nature (2025); <a href="https://www.uni-goettingen.de/en/73613.html?id=7808">University of Göttingen press release, 22 May 2025</a>. This study measured ruthenium isotopes, not gold. Ruthenium travels with gold, so what it says about gold is an inference.</li>
+          </ul>
+
+          <h3 class="ref-h">Gold mined</h3>
+          <ul class="refs">
+            <li><a href="https://www.gold.org/about-gold/gold-supply/gold-mining/how-much-gold-has-been-mined">World Gold Council, how much gold has been mined</a> (accessed 2026).</li>
+          </ul>
+        </section>
+
+        <section class="block" id="added" aria-labelledby="added-h">
+          <h2 id="added-h">Added in the <em>book</em></h2>
+          <p class="note">Facts that are in the book but not in the film, and the places where the book says something different from the film. <span class="badge">calc</span> means the number is our own arithmetic.</p>
+          <ol class="claims" style="--start:0">
+            <li><p class="c">A gram of neutrons is about six hundred thousand billion billion particles, more than ten thousand times the number of air molecules in the same space.</p>
+              <p class="src"><a href="https://en.wikipedia.org/wiki/R-process">R-process</a>, Wikipedia ("almost a gram of free neutrons in every cubic centimeter")<span class="sep">·</span><span class="calc">1 g ÷ 1.675 × 10⁻²⁴ g per neutron ≈ 6 × 10²³; air at sea level holds about 2.5 × 10¹⁹ molecules per cm³, a standard value. That gives roughly 24,000 times; the book's fact-check set the wording at "more than ten thousand"</span><span class="badge">calc</span></p></li>
+            <li><p class="c">Left alone, a free neutron falls apart in about fifteen minutes on average, and half of them are gone in ten.</p>
+              <p class="src"><span class="nolink">standard values checked in the book's fact-check: mean lifetime 878 s, half-life about 610 s; no page linked</span></p></li>
+            <li><p class="c">Strontium, element 38, was the first heavy element to be identified in the light of a neutron-star merger.</p>
+              <p class="src"><span class="nolink">Watson et al., Nature 574, 497–500 (2019)</span><span class="sep">·</span><a href="https://en.wikipedia.org/wiki/AT2017gfo">AT2017gfo</a>, Wikipedia ("direct proof of strontium production during such an event")</p></li>
+            <li><p class="c">Different from the film: published estimates of the gold made in the 2017 crash run from about ten Earth masses to a hundred or more. The film gives "about 3 to about 100". <em>Debated.</em></p>
+              <p class="src"><a href="https://en.wikipedia.org/wiki/AT2017gfo">AT2017gfo</a>, Wikipedia (about 10 Earth masses of gold and platinum)<span class="sep">·</span><a href="https://svs.gsfc.nasa.gov/12740/">NASA SVS</a> ("hundreds of Earth masses of gold and platinum")<span class="sep">·</span><span class="calc">the film's lower figure of 3 is the Wikipedia range we could not trace to a primary paper; the book leaves it out</span></p></li>
+            <li><p class="c">About ten Earths' worth of gold would make a ball about 1.42 times as wide as the Earth, which is how the book draws it.</p>
+              <p class="src"><span class="calc">radius = (10 × 5.51 ÷ 19.3)^(1/3) = 1.42 Earth radii, using the densities of the Earth (5.51 g/cm³) and of gold (19.3 g/cm³)</span><span class="badge">calc</span></p></li>
+            <li><p class="c">More exact than the film: all the gold ever mined, about 222,600 tonnes, would fit in a cube about 22.6 metres on each side. The film rounds this to 23 metres, and so does the book's headline.</p>
+              <p class="src"><a href="https://www.gold.org/about-gold/gold-supply/gold-mining/how-much-gold-has-been-mined">World Gold Council: how much gold has been mined</a>, World Gold Council</p></li>
+          </ol>
+        </section>
+
+        <section class="block" id="claims" aria-labelledby="claims-h">
+          <h2 id="claims-h">Claim by claim, <em>and where it comes from</em></h2>
+          <p class="note">The book grew out of our film and rests on the same research, so this is the film's list of claims, in film order, one line each. The book tells the same story with more room; where it says something different, the section above says so. Links go to the sources our researchers read. <span class="badge">calc</span> means we derived the number ourselves and a fact-checker recomputed it. "Measured" marks what instruments recorded; "Debated" marks what researchers still disagree about. Wikipedia pages and press releases are secondary sources, used where they quote the primary papers; several Nature papers are paywalled and were read through their abstracts.</p>
+
+          <article class="chapter-claims" aria-labelledby="c0">
+            <header><span class="ts">Film · 0:00</span><h3 id="c0">The Cold Open</h3></header>
+            <ol class="claims" style="--start:0">
+              <li><p class="c">Gold in a ring is older than the Earth and older than the Sun: the metal was made before the cloud that formed them collapsed.</p>
+                <p class="src"><a href="https://space.com/where-did-gold-come-from.html">Space.com, where-did-gold-come-from</a>, Space.com (search snippet only; the page itself was not opened)<span class="sep">·</span><span class="nolink">the 4.6 billion year age of the Sun and Earth is standard; no single primary page was fetched</span></p></li>
+              <li><p class="c">Nothing on Earth could have made that gold, and neither could the Sun: stars fuse only up to the iron group, and gold needs a different process.</p>
+                <p class="src"><a href="https://en.wikipedia.org/wiki/Nuclear_binding_energy">Nuclear binding energy</a>, Wikipedia<span class="sep">·</span><a href="https://en.wikipedia.org/wiki/R-process">R-process</a>, Wikipedia ("approximately half of the atomic nuclei heavier than iron")</p></li>
+              <li><p class="c">A 5 g ring holds about fifteen thousand billion billion (1.5 × 10²²) atoms of gold.</p>
+                <p class="src"><span class="calc">our calculation: 5 g ÷ 196.97 g/mol × 6.022 × 10²³; the 5 g ring is our assumption</span><span class="badge">calc</span></p></li>
+              <li><p class="c">The same metal is in your phone and maybe in your teeth.</p>
+                <p class="src"><span class="nolink">Gold, Wikipedia (corrosion-resistant electrical connectors in computerised devices; dentistry); we did not link the page</span><span class="sep">·</span>a phone holds only a few hundredths of a gram (soft figure from trade sites, not used on screen as a number)</p></li>
+            </ol>
+          </article>
+
+          <article class="chapter-claims" aria-labelledby="c1">
+            <header><span class="ts">Film · 0:41</span><h3 id="c1">Why the Sun Can't Make Gold</h3></header>
+            <ol class="claims" style="--start:4">
+              <li><p class="c">Stars spend their lives fusing small nuclei into bigger ones, and each fusion releases energy. The biggest stars keep going up to iron.</p>
+                <p class="src"><a href="https://en.wikipedia.org/wiki/Nuclear_binding_energy">Nuclear binding energy</a>, Wikipedia ("For elements that weigh more than iron… the fusion process no longer releases energy"); the page does not itself say "stars stop at iron", which is standard stellar physics, so the film says iron and nickel, the iron group</p></li>
+              <li><p class="c">Iron and nickel have the most tightly bound nuclei there are, so fusing them into anything heavier costs energy instead of releasing it.</p>
+                <p class="src"><a href="https://en.wikipedia.org/wiki/Nuclear_binding_energy">Nuclear binding energy</a>, Wikipedia ("nickel-62 is the most tightly bound nucleus"; iron-56 "the most efficiently bound")</p></li>
+              <li><p class="c">An iron nucleus holds 56 particles and a gold nucleus 197.</p>
+                <p class="src"><a href="https://en.wikipedia.org/wiki/Nuclear_binding_energy">Nuclear binding energy</a>, Wikipedia (iron-56)<span class="sep">·</span><a href="https://en.wikipedia.org/wiki/R-process">R-process</a>, Wikipedia (gold, A = 197, mainly an r-process element)</p></li>
+              <li><p class="c">So fusion can never make gold, however big the star.</p>
+                <p class="src"><a href="https://en.wikipedia.org/wiki/Nuclear_binding_energy">Nuclear binding energy</a>, Wikipedia<span class="sep">·</span><a href="https://en.wikipedia.org/wiki/R-process">R-process</a>, Wikipedia</p></li>
+              <li><p class="c">Iron is “the ash of a star”: you cannot keep a fire going by burning the ash.</p>
+                <p class="src"><span class="calc">our analogy, not a sourced claim; the film uses it once, after showing the real physics</span></p></li>
+            </ol>
+          </article>
+
+          <article class="chapter-claims" aria-labelledby="c2">
+            <header><span class="ts">Film · 1:54</span><h3 id="c2">The Recipe for Gold</h3></header>
+            <ol class="claims" style="--start:9">
+              <li><p class="c">Gold is built with neutrons, by the r-process (rapid neutron capture), which makes about half of the nuclei heavier than iron; the slow s-process makes the rest.</p>
+                <p class="src"><a href="https://en.wikipedia.org/wiki/R-process">R-process</a>, Wikipedia</p></li>
+              <li><p class="c">A neutron has no electric charge, so a nucleus does not push it away and it can stick. When a nucleus holds too many neutrons, some turn into protons, and each new proton moves the atom up one element until it reaches gold.</p>
+                <p class="src"><span class="nolink">textbook nuclear physics (beta decay), checked as standard in our fact-check; not tied to a page we opened</span></p></li>
+              <li><p class="c">The overstuffed nuclei fall apart quickly, so the next neutrons must arrive first: up to about 100 captures per second.</p>
+                <p class="src"><a href="https://en.wikipedia.org/wiki/R-process">R-process</a>, Wikipedia ("up to 100 captures per second")</p></li>
+              <li><p class="c">The process needs about a gram of free neutrons in every cubic centimetre, the size of a sugar cube (about 10²⁴ per cm³).</p>
+                <p class="src"><a href="https://en.wikipedia.org/wiki/R-process">R-process</a>, Wikipedia ("almost a gram of free neutrons in every cubic centimeter")</p></li>
+              <li><p class="c">In 1957 four scientists (Burbidge, Burbidge, Fowler and Hoyle) named the r-process and guessed that supernovae were where it happens.</p>
+                <p class="src"><a href="https://en.wikipedia.org/wiki/B2FH_paper">B2FH paper</a>, Wikipedia (Rev. Mod. Phys. 29, 547)<span class="sep">·</span><a href="https://en.wikipedia.org/wiki/R-process">R-process</a>, Wikipedia (the review "named the r-process and outlined the physics that guides it"; supernovae proposed "probably")</p></li>
+              <li><p class="c">For about sixty years the supernova was the standard answer, but simulations of these explosions kept falling short of neutrons.</p>
+                <p class="src"><a href="https://arxiv.org/abs/1901.01410">Origin of the heaviest elements: the rapid neutron-capture process</a>, Cowan et al., Rev. Mod. Phys., 2021 ("more recent studies have cast substantial doubts on this environment")<span class="sep">·</span><a href="https://en.wikipedia.org/wiki/R-process">R-process</a>, Wikipedia (supernova ejecta must be neutron-rich, "a condition which has been difficult to achieve in models")<span class="sep">·</span><span class="calc">“sixty years”: 1957 to the 2017 merger, our arithmetic</span><span class="badge">calc</span></p></li>
+            </ol>
+          </article>
+
+          <article class="chapter-claims" aria-labelledby="c3">
+            <header><span class="ts">Film · 3:44</span><h3 id="c3">The Day Two Dead Stars Crashed</h3></header>
+            <ol class="claims" style="--start:15">
+              <li><p class="c">A neutron star holds about the mass of the Sun in a ball about 20 km across; a sugar cube of it would weigh about a billion tonnes.</p>
+                <p class="src"><a href="https://imagine.gsfc.nasa.gov/science/objects/neutron_stars1.html">Neutron stars</a>, NASA Imagine the Universe ("about 20 kilometers"; a sugar cube "would weigh about 1 trillion kilograms")<span class="sep">·</span><span class="calc">1 trillion kg = 10⁹ tonnes</span><span class="badge">calc</span></p></li>
+              <li><p class="c">Gravity keeps those neutrons locked inside; something has to rip the star apart, and a second neutron star could do it.</p>
+                <p class="src"><span class="nolink">textbook physics for the first half</span><span class="sep">·</span><a href="https://arxiv.org/abs/1710.05463">Kasen et al., Nature 551, 80 (2017)</a> (abstract: mergers are likely "a dominant mode of r-process production")</p></li>
+              <li><p class="c">On 17 August 2017, at 12:41 universal time, three detectors felt a gravitational wave from two neutron stars that had merged about 130 million years of light travel away, in the galaxy NGC 4993. Measured.</p>
+                <p class="src"><a href="https://en.wikipedia.org/wiki/AT2017gfo">AT2017gfo</a>, Wikipedia (12:41:04.4 UTC; LIGO Hanford, Livingston and Virgo)<span class="sep">·</span><a href="https://svs.gsfc.nasa.gov/12740/">NASA Goddard SVS 12740</a>, NASA Goddard SVS (NGC 4993, about 130 million light-years)</p></li>
+              <li><p class="c">Less than two seconds later, a space telescope caught a flash of gamma rays. Measured.</p>
+                <p class="src"><a href="https://en.wikipedia.org/wiki/AT2017gfo">AT2017gfo</a>, Wikipedia (Fermi: "1.74±0.05 s after the merger time and lasting for about 2 seconds")<span class="sep">·</span><a href="https://svs.gsfc.nasa.gov/12740/">NASA SVS</a></p></li>
+              <li><p class="c">A telescope in Chile photographed a new point of light in that galaxy less than eleven hours after the ripple. Measured.</p>
+                <p class="src"><a href="https://en.wikipedia.org/wiki/AT2017gfo">AT2017gfo</a>, Wikipedia (the Swope image, 10 h 52 min after the event; "six teams imaged the same new source independently in a 90-minute interval")</p></li>
+              <li><p class="c">Over the next days the light changed from blue to red as the debris, thrown out at about a tenth of the speed of light, expanded and cooled. Measured.</p>
+                <p class="src"><a href="https://en.wikipedia.org/wiki/AT2017gfo">AT2017gfo</a>, Wikipedia ("the color of the optical source changed from blue to red as the source expanded and cooled"; about 10 percent of light speed)<span class="sep">·</span><span class="calc">0.1 × 299,792 km/s ≈ 30,000 km/s</span><span class="badge">calc</span></p></li>
+              <li><p class="c">This glow is a kilonova, powered by the radioactive decay of freshly made atoms.</p>
+                <p class="src"><a href="https://svs.gsfc.nasa.gov/12740/">NASA Goddard SVS 12740</a>, NASA Goddard SVS ("glow powered by decay of newly forged radioactive elements")</p></li>
+              <li><p class="c">The blue light came from a cloud of lighter atoms and the red light from a cloud of much heavier ones, the group gold belongs to.</p>
+                <p class="src"><a href="https://arxiv.org/abs/1710.05463">Kasen et al., Nature 2017</a> (light r-process, A &lt; 140, blue; heavy, A &gt; 140, red)</p></li>
+              <li><p class="c">Astronomers read the fingerprints of freshly made elements in that light, first strontium and later a few more. Measured.</p>
+                <p class="src"><a href="https://en.wikipedia.org/wiki/AT2017gfo">AT2017gfo</a>, Wikipedia ("direct proof of strontium production during such an event"; yttrium, lanthanum and cerium identified later)</p></li>
+              <li><p class="c">The amount of gold was calculated from the size of the red cloud, not measured atom by atom. Estimates for this one crash run from about 3 to about 100 Earth masses of gold; they differ because the ejected mass and the heavy-cloud share depend on the model. <em>Debated.</em></p>
+                <p class="src"><a href="https://en.wikipedia.org/wiki/AT2017gfo">AT2017gfo</a>, Wikipedia (about 10 Earth masses of gold and platinum, E. Berger, press conference 16 Oct 2017; ejecta about 16,000 Earth masses of heavy elements)<span class="sep">·</span><a href="https://svs.gsfc.nasa.gov/12740/">NASA SVS</a> ("hundreds of Earth masses of gold and platinum")<span class="sep">·</span><a href="https://en.wikipedia.org/wiki/R-process">R-process</a>, Wikipedia ("between 3 and 13 Earth masses of gold", not traced to a primary paper)<span class="sep">·</span><a href="https://arxiv.org/pdf/1710.05858">Pian et al., Nature 2017</a> (ejecta 0.03 to 0.05 Suns)<span class="sep">·</span><a href="https://ligo.org/?p=3556">LIGO summary</a> (lower ejecta estimates)</p></li>
+              <li><p class="c">All the gold ever mined would fit in a cube about 23 metres on each side, rings, coins and bars included.</p>
+                <p class="src"><a href="https://www.gold.org/about-gold/gold-supply/gold-mining/how-much-gold-has-been-mined">World Gold Council: how much gold has been mined</a>, World Gold Council (about 222,600 tonnes; cube "around 22.6 metres on each side"; checked in November 2026)<span class="sep">·</span><span class="calc">222,600 t ÷ 19.32 t/m³ = 11,522 m³, side 22.6 m</span><span class="badge">calc</span></p></li>
+              <li><p class="c">That one crash made more gold than the whole Earth weighs. True at every estimate we found, but the size is a model result.</p>
+                <p class="src"><a href="https://svs.gsfc.nasa.gov/12740/">NASA SVS</a><span class="sep">·</span><a href="https://en.wikipedia.org/wiki/AT2017gfo">AT2017gfo</a>, Wikipedia<span class="sep">·</span><span class="calc">even the lowest figure, 3 Earth masses, is about 8 × 10¹⁶ times all gold ever mined</span><span class="badge">calc</span></p></li>
+            </ol>
+          </article>
+
+          <article class="chapter-claims" aria-labelledby="c4">
+            <header><span class="ts">Film · 6:15</span><h3 id="c4">The Crash Nobody Saw</h3></header>
+            <ol class="claims" style="--start:27">
+              <li><p class="c">The Sun and the Earth formed about 4.6 billion years ago from a cloud of gas and dust that already held gold, so the 2017 crash is far too recent to have made your ring.</p>
+                <p class="src"><a href="https://space.com/where-did-gold-come-from.html">Space.com, where-did-gold-come-from</a>, Space.com (search snippet only)<span class="sep">·</span><span class="nolink">age of the Earth is standard; no single primary page was fetched</span></p></li>
+              <li><p class="c">In December 2004 a magnetar, a neutron star with an extreme magnetic field, released a giant flare: in a tenth of a second, more energy than the Sun gives off in 150,000 years.</p>
+                <p class="src"><a href="https://swift.gsfc.nasa.gov/news/2005/05-051.html">NASA Swift, 2005</a>, NASA ("150,000 years" in 0.1 s; search snippet)<span class="sep">·</span><a href="https://imagine.gsfc.nasa.gov/news/25feb05.html">NASA Imagine the Universe, Feb 2005</a>, NASA<span class="sep">·</span><a href="https://en.wikipedia.org/wiki/SGR_1806-20">SGR 1806-20</a>, Wikipedia (27 Dec 2004). The discovery paper (Hurley et al., Nature) says 0.2 s and a quarter of a million years; we quote NASA</p></li>
+              <li><p class="c">About ten minutes after the spike, a second, fainter glow of gamma rays rose and faded over hours; nobody could explain it for twenty years.</p>
+                <p class="src"><a href="https://iopscience.iop.org/article/10.3847/2041-8213/adc9b0">Direct evidence for r-process nucleosynthesis in delayed MeV emission from the SGR 1806-20 magnetar giant flare</a>, Patel et al., ApJL 984, L29, 2025 (rises about 10 min after the spike, fades over hours)</p></li>
+              <li><p class="c">In 2025 astronomers found that this glow matches the radioactive decay of freshly made heavy atoms, from crust the flare blew off the star.</p>
+                <p class="src"><a href="https://iopscience.iop.org/article/10.3847/2041-8213/adc9b0">Patel et al., ApJL 2025</a><span class="sep">·</span><a href="https://news.osu.edu/study-reveals-new-source-of-the-heavy-elements/">Ohio State University news release</a>, Ohio State University</p></li>
+              <li><p class="c">So astronomers had recorded this process thirteen years before the famous crash without knowing it.</p>
+                <p class="src"><span class="calc">Dec 2004 to Aug 2017 is 12.6 years, rounded to thirteen</span><span class="badge">calc</span></p></li>
+              <li><p class="c">Flares like this one make at least about 1% to 10% of the heavy atoms in our galaxy. An estimate from a single flare.</p>
+                <p class="src"><a href="https://iopscience.iop.org/article/10.3847/2041-8213/adc9b0">Patel et al., ApJL 2025</a> (abstract: "at least ~1%-10%", for r-process elements with A ≥ 90, not gold alone; about 10<sup>−6</sup> Suns of r-process material in the flare)<span class="sep">·</span><a href="https://news.osu.edu/study-reveals-new-source-of-the-heavy-elements/">Ohio State</a> ("up to 10%")<span class="sep">·</span>our fact-check changed an earlier "a few percent" to "one percent"</p></li>
+              <li><p class="c">Nobody knows how much gold comes from crashes, how much from magnetar flares, and how much from a third source, rapidly spinning stars that collapse. <em>Debated.</em></p>
+                <p class="src"><a href="https://arxiv.org/abs/1901.01410">Cowan et al., Rev. Mod. Phys. 2021</a><span class="sep">·</span><a href="https://arxiv.org/abs/1710.05463">Kasen et al., 2017</a> (mergers "a dominant mode")<span class="sep">·</span><a href="https://news.columbia.edu/node/8205">Columbia University news (node 8205)</a> (Metzger: the second time we have directly seen where these elements form, after mergers; page not fetched, snippet only)<span class="sep">·</span><span class="nolink">Siegel, Barnes and Metzger, Nature 569, 2019 (collapsars may make over 80%), and Kobayashi et al., ApJL 943, L12, 2023 (mergers alone fail timing tests): read as abstracts, no URL in our files</span></p></li>
+              <li><p class="c">A gold atom from a crash is identical to one from a flare, so the ring cannot tell us.</p>
+                <p class="src"><span class="nolink">textbook physics: all gold-197 atoms are identical</span></p></li>
+              <li><p class="c">All of this debris mixed into the clouds that formed new stars and planets, so your ring may hold atoms from many catastrophes.</p>
+                <p class="src"><a href="https://news.osu.edu/study-reveals-new-source-of-the-heavy-elements/">Ohio State</a> (T. Thompson: "All of that material they eject gets mixed into the next generation of planets and stars")<span class="sep">·</span><a href="https://www.syfy.com/syfy-wire/a-nearby-binary-neutron-star-collision-may-have-seeded-the-early-solar-system-with-gold">Syfy Wire article on a nearby neutron-star collision</a>, Syfy (press coverage of Bartos and Marka, 2019; one merger may account for about 0.3%)</p></li>
+            </ol>
+          </article>
+
+          <article class="chapter-claims" aria-labelledby="c5">
+            <header><span class="ts">Film · 8:24</span><h3 id="c5">Why You Can Hold Gold at All</h3></header>
+            <ol class="claims" style="--start:36">
+              <li><p class="c">The young Earth was hot enough for its heavy iron to sink to the centre and form the core.</p>
+                <p class="src"><span class="nolink">standard geophysics, checked as textbook</span></p></li>
+              <li><p class="c">Gold mixes easily with iron, so nearly all of the Earth&#8217;s gold went down with it, under about 3,000 km of solid rock. More than 99.999% by one estimate.</p>
+                <p class="src"><a href="https://www.uni-goettingen.de/en/73613.html?id=7808">University of Göttingen press release no. 85</a>, 22 May 2025 (Messling et al., Nature 2025: "More than 99.999% of Earth’s stores of gold and other precious metals lie buried under 3,000 km of solid rock"). The paper measured ruthenium isotopes; gold is inferred<span class="sep">·</span><a href="https://www.sciencealert.com/earths-core-holds-a-vast-reservoir-of-gold-and-its-leaking-toward-the-surface">ScienceAlert</a><span class="sep">·</span><a href="https://discovermagazine.com/planet-earth/earths-inner-fort-knox">Discover</a> (other outlets say more than 99%)</p></li>
+              <li><p class="c">After the core formed, a rain of meteorites kept hitting the Earth, and the gold they carried stayed near the surface. The favoured explanation, not settled. <em>Debated.</em></p>
+                <p class="src"><a href="https://www.nature.com/articles/nature10399">Willbold, Elliott and Moorbath, Nature 477, 195, 2011</a> (paywalled; read through its abstract and press coverage)<span class="sep">·</span><span class="nolink">Brenan and McDonough, Nature Geoscience, 2009, argue core-formation chemistry alone could explain mantle gold; not opened</span></p></li>
+              <li><p class="c">One clue is in the tungsten of 3.8-billion-year-old rocks, which differs slightly from modern rocks (about 13 parts per million in tungsten-182), as a late meteorite rain would leave it.</p>
+                <p class="src"><a href="https://www.nature.com/articles/nature10399">Willbold et al., Nature 2011</a> (Isua rocks, Greenland)<span class="sep">·</span>a later conference abstract (Tusch, Goldschmidt 2017) found Isua mantle rocks that look modern, against a missing veneer</p></li>
+              <li><p class="c">Two thirds of all the gold ever mined was dug out of the ground after 1950.</p>
+                <p class="src"><a href="https://www.gold.org/about-gold/gold-supply/gold-mining/how-much-gold-has-been-mined">World Gold Council: how much gold has been mined</a>, World Gold Council</p></li>
+              <li><p class="c">Catastrophes in our galaxy forged the atoms within seconds, more than four and a half billion years ago; probably crashing neutron stars, maybe flares like the one of 2004.</p>
+                <p class="src"><a href="https://en.wikipedia.org/wiki/R-process">R-process</a>, Wikipedia (captures must beat radioactive decay)<span class="sep">·</span><a href="https://arxiv.org/abs/1710.05463">Kasen et al., 2017</a><span class="sep">·</span><a href="https://iopscience.iop.org/article/10.3847/2041-8213/adc9b0">Patel et al., 2025</a><span class="sep">·</span><span class="calc">no source we opened states how long the neutron-capture burst lasts; "within seconds" is our safe wording, and "probably" is a hedge, see caveats</span></p></li>
+              <li><p class="c">The atoms ended up in a cloud that collapsed into the Sun and Earth; the Earth swallowed nearly all its gold, and meteorites brought a tiny amount to the surface.</p>
+                <p class="src"><a href="https://space.com/where-did-gold-come-from.html">Space.com</a> (snippet)<span class="sep">·</span><a href="https://www.uni-goettingen.de/en/73613.html?id=7808">Göttingen</a><span class="sep">·</span><a href="https://www.nature.com/articles/nature10399">Nature 2011</a></p></li>
+            </ol>
+          </article>
+
+          <article class="chapter-claims" aria-labelledby="c6">
+            <header><span class="ts">Film · 10:07</span><h3 id="c6">The Ring in Your Hand</h3></header>
+            <ol class="claims" style="--start:43">
+              <li><p class="c">The ring is debris, the wreckage of catastrophes nobody saw, and its metal is older than the ground you stand on.</p>
+                <p class="src"><a href="https://space.com/where-did-gold-come-from.html">Space.com, where-did-gold-come-from</a>, Space.com (snippet)<span class="sep">·</span><span class="nolink">the Earth is about 4.6 billion years old; the gold was made before it</span></p></li>
+              <li><p class="c">This gold fell out of the sky onto a planet that had already swallowed almost all the rest.</p>
+                <p class="src"><a href="https://www.uni-goettingen.de/en/73613.html?id=7808">Göttingen</a><span class="sep">·</span><a href="https://www.nature.com/articles/nature10399">Willbold et al., 2011</a>. The sky delivery is the favoured view, not unanimous</p></li>
+            </ol>
+          </article>
+        </section>
+
+        <section class="block" id="caveats" aria-labelledby="caveats-h">
+          <h2 id="caveats-h">Simplifications and <em>honest caveats</em></h2>
+          <p class="note">What was measured, what is still argued over, and where the numbers depend on choices we made. Written for the film, and they apply to the book too.</p>
+          <ul class="caveats">
+            <li><span class="k">Measured</span><h3>One crash, seen in every kind of light</h3><p>The gravitational wave, the gamma-ray flash 1.74 seconds later, the new point of light within eleven hours, the blue-to-red change over days and the strontium in the spectrum were all recorded in August 2017. That the glow is powered by freshly made heavy atoms is the accepted reading of those data.</p></li>
+            <li><span class="k k--con">Debated</span><h3>Who made most of the gold</h3><p>Neutron star mergers are the only source seen directly in the act, and a leading candidate. A 2019 estimate gave rapidly spinning, collapsing stars (collapsars) more than 80%; a 2023 study found that mergers alone fail some timing tests against the age of old stars; a 2025 paper adds magnetar flares at roughly 1% to 10%. The film says nobody knows the split, and its "probably crashing neutron stars, maybe flares" is a hedge, not a result. We did not open the Nature papers behind the first two; we read their abstracts.</p></li>
+            <li><span class="k k--unc">Uncertain</span><h3>How much gold one crash made</h3><p>Published figures for the 2017 crash run from about 3 Earth masses of gold to about 100, and NASA's own page says "hundreds" for gold and platinum together. The 3 to 13 figure on Wikipedia could not be traced to a primary paper. That is why the film does not give a number and says only "more gold than the whole Earth weighs", which holds at every estimate. The amount is calculated from the size of the red cloud, not measured.</p></li>
+            <li><span class="k k--unc">Uncertain</span><h3>The magnetar share rests on one flare</h3><p>The 1% to 10% comes from a single observed flare, and the authors call it uncertain. It is a share of all heavy r-process elements (mass number 90 and up), not of gold alone. Press versions differ ("up to 10%", "10% or more"). Our fact-check caught and fixed an earlier line in the script that said "a few percent".</p></li>
+            <li><span class="k k--unc">Uncertain</span><h3>"Within seconds" is not sourced</h3><p>No page we opened gives how long the neutron-capture burst lasts. Merger debris is thrown out within milliseconds to seconds in simulations, so the film says "within seconds" and never "under a second". Neutron captures only have to beat radioactive decay, up to about 100 per second.</p></li>
+            <li><span class="k k--unc">Uncertain</span><h3>The meteorite rain is the favoured story, not a fact</h3><p>Tungsten in 3.8-billion-year-old rocks fits a late meteorite rain, but one study argues core-formation chemistry alone could explain the gold in the mantle, and another found rocks that look modern. The "Late Heavy Bombardment" is itself disputed, so the film only says a rain of meteorites came after the core formed.</p></li>
+            <li><span class="k k--unc">Uncertain</span><h3>Earth's core gold is inferred</h3><p>The 99.999% figure comes from ruthenium isotopes, not from measuring gold, and other outlets say 99% or 99.9%. The film says "nearly all". The core is mostly iron and nickel with a trace of gold, not a ball of gold.</p></li>
+            <li><span class="k">Simplified</span><h3>Sugar cubes and teaspoons</h3><p>NASA's figure is about a trillion kilograms (a billion tonnes) for a sugar cube of neutron-star matter, so the film says sugar cube. The popular "teaspoon" line is looser: a teaspoon is about five cubes, and the density inside a neutron star is uncertain by a factor of a few. The "gram of neutrons per cubic centimetre" is the r-process neutron density, a different thing.</p></li>
+            <li><span class="k">Simplified</span><h3>Iron, the iron group, and one analogy</h3><p>Fusion ends at the iron group (iron-56 and nickel-62), which the film shortens to "iron". "The ash of a star" is our analogy, used once and dropped. The 5 g ring is our assumption, and "thirteen years before the famous crash" rounds 12.6.</p></li>
+            <li><span class="k">Simplified</span><h3>Two sets of numbers for the 2004 flare</h3><p>NASA says the flare put out more energy in 0.1 seconds than the Sun does in 150,000 years; the discovery paper says 0.2 seconds and 250,000 years. Its distance is given as 42,000 or 50,000 light-years. The film uses NASA's energy line and no distance.</p></li>
+            <li><span class="k">How we know</span><h3>Some sources are secondary</h3><p>The ring's age rests on Space.com snippets and the standard age of the Sun, not on a primary page. Textbook physics (neutrons stick, beta decay climbs the elements, iron sinks to the core) was checked as standard but is not tied to a page. Several quotes reached us through a page-reading tool, so check punctuation on the original pages. The gold-mined figure is the World Gold Council's of November 2026 and will drift.</p></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>
+        <a class="logo" href="../index.html"><img src="../assets/img/avatar.jpg" alt="" width="32" height="32"><span class="brand"></span></a>
+        <p style="margin-top:0.8rem">Illustrated astronomy books. No trackers, no cookies.</p>
+      </div>
+      <p><a href="index.html">All books</a> · <a href="../gold.html">The film and its notes</a></p>
+    </div>
+  </footer>
+  <script src="../assets/js/site.js"></script>
+</body>
+</html>
